@@ -4,7 +4,7 @@ namespace WordToNumber
 {
     public static class Program
     {
-        public static void Main()
+        public static int Main()
         {
             var isRunning = true;
             do
@@ -23,12 +23,13 @@ namespace WordToNumber
                         break;
                     default:
                         var translatedText = Converter.Translate(input);
-                        Console.WriteLine(translatedText);
+                        Console.WriteLine("> " + translatedText);
                         break;
                 }
             } while (isRunning);
 
             Console.WriteLine("Bye!");
+            return 0;
         }
     }
 }
